@@ -1,5 +1,5 @@
 def get_student_score() -> float:
-    """Prompts the user to enter a valid numerical score and returns it."""
+   
     while True:
         try:
             score = float(input("Enter your score: "))
@@ -11,7 +11,7 @@ def get_student_score() -> float:
             print("Invalid input. Please enter a numeric value.")
 
 def calculate_grade(score: float) -> str:
-    """Determines the letter grade based on the given score."""
+   
     grades = {
         (90, 100): 'A',
         (80, 89): 'B',
@@ -24,7 +24,7 @@ def calculate_grade(score: float) -> str:
     return 'F'
 
 def main():
-    """Main function to execute the grade calculator."""
+  
     score = get_student_score()
     grade = calculate_grade(score)
     print(f"Your Grade is: {grade}")
