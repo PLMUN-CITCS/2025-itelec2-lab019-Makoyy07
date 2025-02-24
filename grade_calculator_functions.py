@@ -12,16 +12,16 @@ def get_student_score() -> float:
 
 def calculate_grade(score: float) -> str:
     """Determines the letter grade based on the given score."""
-    if score >= 90:
-        return 'A'
-    elif score >= 80:
-        return 'B'
-    elif score >= 70:
-        return 'C'
-    elif score >= 60:
-        return 'D'
-    else:
-        return 'F'
+    grades = {
+        (90, 100): 'A',
+        (80, 89): 'B',
+        (70, 79): 'C',
+        (60, 69): 'D'
+    }
+    for range_, grade in grades.items():
+        if range_[0] <= score <= range_[1]:
+            return grade
+    return 'F'
 
 def main():
     """Main function to execute the grade calculator."""
