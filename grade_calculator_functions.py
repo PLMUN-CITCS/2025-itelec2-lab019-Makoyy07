@@ -1,3 +1,5 @@
+import math
+
 def get_student_score() -> float:
   
     while True:
